@@ -1,17 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfku2p46ttknw"]
+[gd_scene load_steps=16 format=3 uid="uid://cfku2p46ttknw"]
+
+[ext_resource type="StyleBox" uid="uid://bwysp8gw0jvc6" path="res://normal_function_style.tres" id="1_ch7qc"]
+[ext_resource type="Texture2D" uid="uid://dxtl52jqdwjvk" path="res://assets/Negate_btn.png" id="1_ixomv"]
+[ext_resource type="Texture2D" uid="uid://drh0mkbd83pgp" path="res://assets/Delete_btn.png" id="2_4447w"]
+[ext_resource type="Texture2D" uid="uid://bqji6fs7xdf0c" path="res://assets/Division_btn.png" id="3_0ae7u"]
+[ext_resource type="Texture2D" uid="uid://dq8o7qvv06i2g" path="res://assets/Multiplication_btn.png" id="4_iqopu"]
+[ext_resource type="Texture2D" uid="uid://c6cufjnc3b768" path="res://assets/Subtraction_btn.png" id="5_a7rdb"]
+[ext_resource type="StyleBox" uid="uid://dh7tca7cipwrm" path="res://normal_number_style.tres" id="5_y338p"]
+[ext_resource type="Texture2D" uid="uid://n5rond0g3uwr" path="res://assets/Addition_btn.png" id="6_xeatu"]
+[ext_resource type="Texture2D" uid="uid://bd6sbnogpio3g" path="res://assets/Equal_btn.png" id="7_gbgx8"]
+[ext_resource type="StyleBox" uid="uid://demp3q6867bxb" path="res://hover_equal_style.tres" id="9_otu2r"]
+[ext_resource type="StyleBox" uid="uid://dxwt81f0petdp" path="res://pressed_equal_style.tres" id="10_elp2s"]
 
 [sub_resource type="SystemFont" id="SystemFont_0fjvv"]
 font_names = PackedStringArray("Arial")
 
+[sub_resource type="SystemFont" id="SystemFont_hqmgt"]
+font_names = PackedStringArray("Arial")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5e7wg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e28su"]
+bg_color = Color(0.247059, 0.854902, 0.721569, 1)
+
 [node name="Calculator" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = -123.0
-offset_right = 5.0
-offset_bottom = -123.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -78,103 +96,329 @@ layout_mode = 2
 
 [node name="TopButtons" type="GridContainer" parent="Screen/ColorRect/AllComponentsContainer/AllButtons"]
 layout_mode = 2
+size_flags_horizontal = 4
 columns = 4
 
-[node name="Button" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+[node name="Clear_btn" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
 custom_minimum_size = Vector2(161, 161)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
+theme_override_fonts/font = SubResource("SystemFont_hqmgt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("1_ch7qc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+text = "C"
 
-[node name="Button2" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+[node name="Negate_btn" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
 custom_minimum_size = Vector2(161, 161)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_ch7qc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
 
-[node name="Button3" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
-custom_minimum_size = Vector2(161, 161)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+[node name="TextureRect" type="TextureRect" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons/Negate_btn"]
+modulate = Color(0.662745, 0.662745, 0.662745, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ixomv")
+stretch_mode = 5
 
-[node name="Button4" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+[node name="Delete_btn" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
 custom_minimum_size = Vector2(161, 161)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_ch7qc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
 
-[node name="Button5" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
-custom_minimum_size = Vector2(161, 161)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+[node name="TextureRect" type="TextureRect" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons/Delete_btn"]
+modulate = Color(0.662745, 0.662745, 0.662745, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4447w")
+stretch_mode = 5
 
-[node name="Button6" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+[node name="Division_btn" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
 custom_minimum_size = Vector2(161, 161)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_ch7qc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
 
-[node name="Button7" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
-custom_minimum_size = Vector2(161, 161)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+[node name="TextureRect" type="TextureRect" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons/Division_btn"]
+modulate = Color(0.662745, 0.662745, 0.662745, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_0ae7u")
+stretch_mode = 5
 
-[node name="Button8" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+[node name="7" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
 custom_minimum_size = Vector2(161, 161)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
+theme_override_fonts/font = SubResource("SystemFont_hqmgt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_y338p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+text = "7"
 
-[node name="Button9" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+[node name="8" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
 custom_minimum_size = Vector2(161, 161)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
+theme_override_fonts/font = SubResource("SystemFont_hqmgt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_y338p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+text = "8"
 
-[node name="Button10" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+[node name="9" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
 custom_minimum_size = Vector2(161, 161)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
+theme_override_fonts/font = SubResource("SystemFont_hqmgt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_y338p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+text = "9"
 
-[node name="Button11" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+[node name="Multiplication_btn" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
 custom_minimum_size = Vector2(161, 161)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_ch7qc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
 
-[node name="Button12" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
-custom_minimum_size = Vector2(161, 161)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+[node name="TextureRect" type="TextureRect" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons/Multiplication_btn"]
+modulate = Color(0.662745, 0.662745, 0.662745, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_iqopu")
+stretch_mode = 5
 
-[node name="Button13" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+[node name="4" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
 custom_minimum_size = Vector2(161, 161)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
+theme_override_fonts/font = SubResource("SystemFont_hqmgt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_y338p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+text = "4"
 
-[node name="Button14" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+[node name="5" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
 custom_minimum_size = Vector2(161, 161)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
+theme_override_fonts/font = SubResource("SystemFont_hqmgt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_y338p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+text = "5"
 
-[node name="Button15" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+[node name="6" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
 custom_minimum_size = Vector2(161, 161)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
+theme_override_fonts/font = SubResource("SystemFont_hqmgt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_y338p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+text = "6"
 
-[node name="Button16" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+[node name="Subtraction_btn" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
 custom_minimum_size = Vector2(161, 161)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_ch7qc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+
+[node name="TextureRect" type="TextureRect" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons/Subtraction_btn"]
+modulate = Color(0.662745, 0.662745, 0.662745, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_a7rdb")
+stretch_mode = 5
+
+[node name="1" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+custom_minimum_size = Vector2(161, 161)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
+theme_override_fonts/font = SubResource("SystemFont_hqmgt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_y338p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+text = "1"
+
+[node name="2" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+custom_minimum_size = Vector2(161, 161)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
+theme_override_fonts/font = SubResource("SystemFont_hqmgt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_y338p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+text = "2"
+
+[node name="3" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+custom_minimum_size = Vector2(161, 161)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
+theme_override_fonts/font = SubResource("SystemFont_hqmgt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_y338p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+text = "3"
+
+[node name="Addition_btn" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons"]
+custom_minimum_size = Vector2(161, 161)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_ch7qc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+
+[node name="TextureRect" type="TextureRect" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/TopButtons/Addition_btn"]
+modulate = Color(0.662745, 0.662745, 0.662745, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_xeatu")
+stretch_mode = 5
 
 [node name="BottomButtons" type="HBoxContainer" parent="Screen/ColorRect/AllComponentsContainer/AllButtons"]
 layout_mode = 2
+
+[node name="0" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/BottomButtons"]
+custom_minimum_size = Vector2(330, 161)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
+theme_override_fonts/font = SubResource("SystemFont_hqmgt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_y338p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+text = "0"
+
+[node name="Decimal_btn" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/BottomButtons"]
+custom_minimum_size = Vector2(161, 161)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
+theme_override_fonts/font = SubResource("SystemFont_hqmgt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_y338p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+text = "."
+
+[node name="Equal_btn" type="Button" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/BottomButtons"]
+custom_minimum_size = Vector2(161, 161)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_e28su")
+theme_override_styles/hover = ExtResource("9_otu2r")
+theme_override_styles/pressed = ExtResource("10_elp2s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e7wg")
+
+[node name="TextureRect" type="TextureRect" parent="Screen/ColorRect/AllComponentsContainer/AllButtons/BottomButtons/Equal_btn"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_gbgx8")
+stretch_mode = 5
