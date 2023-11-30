@@ -43,7 +43,7 @@ func _on_equal_btn_pressed():
 			
 			
 	prev_work_area.text = str(first_number) + " " + operator + " " + str(second_number)
-	work_area.text = str(result)
+	work_area.text = str(snappedf(result, 0.0000000001))
 	
 func _on_addition_btn_pressed():
 	has_been_used = false

@@ -1,11 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701275220
-calculator.tscn::PackedScene::5145692753491950816::1701191571::0::1::::<><>::uid://bwysp8gw0jvc6::::res://normal_function_style.tres<>uid://dxtl52jqdwjvk::::res://assets/Negate_btn.png<>uid://drh0mkbd83pgp::::res://assets/Delete_btn.png<>uid://bqji6fs7xdf0c::::res://assets/Division_btn.png<>uid://dq8o7qvv06i2g::::res://assets/Multiplication_btn.png<>uid://c6cufjnc3b768::::res://assets/Subtraction_btn.png<>uid://dh7tca7cipwrm::::res://normal_number_style.tres<>uid://n5rond0g3uwr::::res://assets/Addition_btn.png<>uid://bd6sbnogpio3g::::res://assets/Equal_btn.png<>uid://demp3q6867bxb::::res://hover_equal_style.tres<>uid://dxwt81f0petdp::::res://pressed_equal_style.tres
+::res://::1701361765
+calculator.gd::GDScript::-1::1701277980::0::1::::<>Control<>::
+calculator.tscn::PackedScene::5145692753491950816::1701277985::0::1::::<><>::res://calculator.gd<>uid://bwysp8gw0jvc6::::res://normal_function_style.tres<>uid://dxtl52jqdwjvk::::res://assets/Negate_btn.png<>uid://drh0mkbd83pgp::::res://assets/Delete_btn.png<>uid://bqji6fs7xdf0c::::res://assets/Division_btn.png<>uid://dq8o7qvv06i2g::::res://assets/Multiplication_btn.png<>uid://c6cufjnc3b768::::res://assets/Subtraction_btn.png<>uid://dh7tca7cipwrm::::res://normal_number_style.tres<>uid://n5rond0g3uwr::::res://assets/Addition_btn.png<>uid://bd6sbnogpio3g::::res://assets/Equal_btn.png<>uid://demp3q6867bxb::::res://hover_equal_style.tres<>uid://dxwt81f0petdp::::res://pressed_equal_style.tres
 hover_equal_style.tres::StyleBoxFlat::7465751605605578339::1701191558::0::1::::<><>::
 icon.svg::CompressedTexture2D::5373866048992515491::1701102784::1701102793::1::::<><>::
 normal_equal_style.tres::StyleBoxFlat::6849519587708442539::1701191459::0::1::::<><>::
-normal_function_style.tres::StyleBoxFlat::3981241746178365007::1701191012::0::1::::<><>::
-normal_number_style.tres::StyleBoxFlat::7717801288661733726::1701191012::0::1::::<><>::
+normal_function_style.tres::StyleBoxFlat::3981241746178365007::1701275232::0::1::::<><>::
+normal_number_style.tres::StyleBoxFlat::7717801288661733726::1701275232::0::1::::<><>::
 pressed_equal_style.tres::StyleBoxFlat::8820235693892023217::1701191457::0::1::::<><>::
 README.md::TextFile::-1::1701103001::0::1::::<><>::
 ::res://assets/::1701103283
